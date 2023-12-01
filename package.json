@@ -25,5 +25,8 @@
   "homepage": "https://github.com/mhaarseth/re-Purpose#readme",
   "dependencies": {
     "bootstrap": "^5.3.2"
+  },
+  "devDependencies": {
+    "sass": "^1.69.5"
   }
 }

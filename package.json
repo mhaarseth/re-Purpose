@@ -1,6 +1,6 @@
 {
   "name": "re-purpose",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Auction site for the selling and byuing of broken and fixed stuff.",
   "type": "module",
   "main": "src/index.js",

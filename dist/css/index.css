@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+   }
+
+a {
+    color: #8A995D;
+}   
+
+.top-line {
+background: #8A995D;
+height: 20px;
+border-radius: 0px 0px 3px 3px;
+}
+
+.header-custom {
+    padding-left:  0;
+    padding-right:  0;
+}
+
+.navbar-brand {
+    padding-top: 0;
+}
+
+.btn-primary {
+    background:#fff;
+    border-color: #8A995D;
+    border-width: 2px;
+    color: #000;
+}
+
+.btn-primary:hover {
+    background:#8A995D;
+    border-color: #8A995D;
+}
+
+
+/* This does not work, for, as of now, unknown reasons */
+.btn-primary:active {
+    background:#8A995D;
+    border-color: #8A995D;
+}
+/* -- */
+
+.brand-heading {
+font-family: Pacifico;
+font-size: 24px;
+}
+
+.navbar {
+    padding: 0.5;
+}
+
+.active {
+    text-decoration: underline;
+}
+
+.footer-custom {
+    background-color: #8A995D;
+    border-radius: 3px 3px 0px 0px;
+}

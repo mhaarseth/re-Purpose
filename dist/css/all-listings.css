@@ -1,6 +1,6 @@
 @import "index.css";
 
-.carousel-custom-img {
+.listings-custom-img {
     height: 350px;
     object-fit: cover;
 }

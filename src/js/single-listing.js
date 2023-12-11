@@ -5,12 +5,10 @@ const urlParams = new URLSearchParams(queryString);
 const id = urlParams.get("id");
 
 const url = NOROFF_LISTINGS_ENDPOINT + "/" + id;
-//console.log(url)
 
 async function viewSingleListing(url) {
     try {
       const response = await fetch(url);
-
       const json = await response.json();
   
         const singleListingDescriptionAndBid = document.getElementById("single-listing-description-and-bid");

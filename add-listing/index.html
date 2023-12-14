@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:,">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
@@ -57,59 +58,51 @@
 <div class="row container justify-content-center mt-5">
 
 <div class="col-sm-4">
+  <form id="add-listing-form">
   <div class="mb-3">
-    <h3 class="fs-6"><label for="exampleFormControlInput1" class="form-label">Title</label></h3>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+    <h3 class="fs-6"><label for="listingTitle" class="form-label">Title</label></h3>
+    <input type="text" class="form-control" id="listingTitle" name="title" placeholder="" required>
   </div>
   <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <label for="listingDescription" class="form-label">Description</label>
+    <textarea class="form-control" id="listingDescription" name="description" rows="3"></textarea>
   </div>
-  <h3 class="fs-6 mt-3">Tag</h3>
+  <h3 class="fs-6 mt-3">Tag:</h3>
+
   <div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-    <label class="form-check-label" for="flexRadioDefault1">
+    <input class="form-check-input listing-tag" type="radio" name="tags" id="fixed-tag" value="fixed">
+    <label class="form-check-label" for="fixed-tag">
       Fixed
     </label>
   </div>
   <div class="form-check">
-    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-    <label class="form-check-label" for="flexRadioDefault2">
+    <input class="form-check-input listing-tag" type="radio" name="tags" id="broken-tag" value="broken">
+    <label class="form-check-label" for="broken-tag">
       Broken
     </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
-      <label class="form-check-label" for="flexRadioDefault3">
-        No tag
-      </label>
-      </div>
+  </div>
   
   <div class="mb-3">
-    <label for="futureDate" class="form-label"><h3 class="fs-6 mt-3">Deadline date</h3></label>
-    <input type="date" class="form-control" id="futureDate">
+    <label for="auction-end" class="form-label"><h3 class="fs-6 mt-3">Auction end:</h3></label>
+    <input type="date" class="form-control" id="auction-end" name:"endsAt">
    </div>
    
-  <button type="button" class="btn btn-success mt-5">Add listing</button>
+  <button type="submit" class="btn btn-success mt-5">Add listing</button>
 
 </div>
 
 <div class="col-sm-4">
     <div class="mb-3">
       <h3 class="fs-6"><label for="imageUrl" class="form-label">Add images</label></h3>
-      <input type="text" class="form-control" id="imageUrl" placeholder="Enter image URL">
-     </div>
-     <div class="mb-3">
-      <input type="text" class="form-control" id="imageUrl" placeholder="Enter image URL">
-     </div>
-     <div class="mb-3">
-      <input type="text" class="form-control" id="imageUrl" placeholder="Enter image URL">
+      <input type="text" class="form-control listing-image" id="imageUrl" placeholder="Enter image URL">
+      <input type="text" class="form-control listing-image" id="imageUrl" placeholder="Enter image URL">
+      <input type="text" class="form-control listing-image" id="imageUrl" placeholder="Enter image URL">
      </div>
     <button type="button" class="btn btn-light">Add more</button>
 
     <div class="row mt-5"></div>
 </div>
-
+</form>
 
 
 
@@ -122,5 +115,6 @@
         </div>
       </footer>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
+      <script src="../src/js/add-listing.js" type="module"></script>
+    </body>
 </html>

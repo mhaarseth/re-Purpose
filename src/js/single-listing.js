@@ -1,4 +1,5 @@
 import { NOROFF_LISTINGS_ENDPOINT } from "./constants/endpoints.js";
+import { placeBid } from "./components/placeBid.js";
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -36,14 +37,17 @@ async function viewSingleListing(url) {
         <h3 class="mb-3">Description</h3>
       <p>${listingDescription}</p>
       <div class="row mt-5">
-        <div class="col-6">
-          <input type="number" min="0" max="1000" step="10" class="form-control" id="numberInput">
-        </div>
-        <div class="col-6">
-          <button type="button" class="btn btn-success">Place bid</button>
-        </div>
+      <div class="col-6">
+        <input type="number" min="10" max="9999" step="10" class="form-control" id="bid-value">
       </div>
+      <div class="col-6">
+        <button type="button" class="btn btn-success" id="place-bid-button">Place bid</button>
+      </div>
+    </div>
         `;
+    
+    placeBid();
+
     } catch (error) {
       console.log(error);
     }

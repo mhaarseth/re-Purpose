@@ -10,7 +10,8 @@
     "start": "live-server",
     "watch": "sass --watch src/scss:dist/css",
     "dev": "npm-run-all --parallel watch start",
-    "lint": "eslint src/**/*.js"
+    "lint": "eslint src/**/*.js",
+    "prettier": "prettier --write './**/*' --ignore-path 'node_modules'"
   },
   "repository": {
     "type": "git",

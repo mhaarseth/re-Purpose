@@ -11,6 +11,7 @@ async function viewSingleListing(url) {
     try {
       const response = await fetch(url);
       const json = await response.json();
+      console.log(json);
   
         const singleListingDescriptionAndBid = document.getElementById("single-listing-description-and-bid");
         const singleListingTitle = document.getElementById("single-listing-title");

@@ -30,7 +30,6 @@ async function loginUser(loginCredentials) {
 
   const response = await fetch(NOROFF_LOGIN_ENDPOINT, postOptions);
   const json = await response.json();
-  console.log(json);
   const token = json.accessToken;
   localStorage.setItem("token", token);
   const profileName = json.name;

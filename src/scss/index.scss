@@ -1,0 +1,68 @@
+@import "variables";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+$primary: #8a995d;
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #fff;
+}
+
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: #8a995d;
+}
+
+.top-line {
+  background: #8a995d;
+  height: 20px;
+  border-radius: 0px 0px 3px 3px;
+}
+
+.header-custom {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar-brand {
+  padding-top: 0;
+}
+
+.btn-primary {
+  background: #fff;
+  border-color: #8a995d;
+  border-width: 2px;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background: #8a995d;
+  border-color: #8a995d;
+}
+
+/* This does not work, for, as of now, unknown reasons */
+.btn-primary:active {
+  background: #8a995d;
+  border-color: #8a995d;
+}
+/* -- */
+
+.brand-heading {
+  font-family: Pacifico;
+  font-size: 24px;
+}
+
+.navbar {
+  padding: 0.5;
+}
+
+.active {
+  text-decoration: underline;
+}

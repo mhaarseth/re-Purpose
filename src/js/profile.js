@@ -25,7 +25,7 @@ async function getProfile() {
       <div class="text-center">
         <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" width="200px" class="img-thumbnail" alt="Profile avatar">
           <p>
-            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal" id="edit-avatar-button">
+            <button type="button" class="btn btn-link fw-bold fs-5" data-bs-toggle="modal" data-bs-target="#exampleModal" id="edit-avatar-button">
               (edit avatar)
             </button>
           </p>
@@ -41,7 +41,7 @@ async function getProfile() {
               <div class="input-group mb-3">
                 <form id="upload-avatar-form">
                   <input type="text" class="form-control" placeholder="Path to new avatar" aria-label="Path to new avatar" aria-describedby="upload-button" id="avatar-url" required>
-                    <button class="btn btn-outline-secondary mt-2" type="submit" id="upload-button">Upload</button>
+                    <button class="btn btn-primary mt-2" type="submit" id="upload-button">Upload</button>
                     <div class="fw-bold text-danger" id="error-message-field"></div>
                 </form>
               </div>
@@ -59,7 +59,7 @@ async function getProfile() {
       <div class="text-center">
         <img src="${profileAvatar}" width="200px" class="img-thumbnail" alt="Profile avatar">
           <p>
-            <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal" id="edit-avatar-button">
+            <button type="button" class="btn btn-link fw-bold fs-5" data-bs-toggle="modal" data-bs-target="#exampleModal" id="edit-avatar-button">
               (edit avatar)
             </button>
           </p>
@@ -75,7 +75,7 @@ async function getProfile() {
               <div class="input-group mb-3">
                 <form id="upload-avatar-form">
                   <input type="text" class="form-control" placeholder="Path to new avatar" aria-label="Path to new avatar" aria-describedby="upload-button" id="avatar-url" required>
-                    <button class="btn btn-outline-secondary mt-2" type="submit" id="upload-button">Upload</button>
+                    <button class="btn btn-primary mt-2" type="submit" id="upload-button">Upload</button>
                     <div class="fw-bold text-danger" id="error-message-field"></div>
                 </form>
               </div>

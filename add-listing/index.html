@@ -52,7 +52,7 @@
 
         <div class="container py-5">
           <nav class="navbar">
-              <span class="navbar mb-0 h1 fs-5 fw-bold">Add listing</span>
+              <h1 class="navbar mb-0 h1 fs-5 fw-bold">Add listing</h1>
             </nav>
 
 <div class="row container justify-content-center mt-5">
@@ -60,14 +60,14 @@
 <div class="col-sm-4">
   <form id="add-listing-form">
   <div class="mb-3">
-    <h3 class="fs-6"><label for="listingTitle" class="form-label fw-bold">Title</label></h3>
-    <input type="text" class="form-control" id="listingTitle" name="title" placeholder="" required>
+    <h2 class="fs-6"><label for="listingTitle" class="form-label fw-bold">Title</label></h2>
+    <input type="text" class="form-control" id="listingTitle" maxlength="30" name="title" placeholder="Max 30 characters" required>
   </div>
-  <div class="mb-3">
+  <h2 class="mb-3 fs-6">
     <label for="listingDescription" class="form-label fw-bold">Description</label>
     <textarea class="form-control" id="listingDescription" name="description" rows="3" required></textarea>
-  </div>
-  <h3 class="fs-6 mt-3 fw-bold">Tag:</h3>
+  </h2>
+  <h2 class="fs-6 mt-3 fw-bold">Tag:</h2>
 
   <div class="form-check">
     <input class="form-check-input listing-tag" type="radio" name="tags" id="fixed-tag" value="fixed" required>
@@ -83,20 +83,20 @@
   </div>
   
   <div class="mb-3">
-    <label for="auction-end" class="form-label"><h3 class="fs-6 mt-3 fw-bold">Auction end:</h3></label>
+    <label for="auction-end" class="form-label"><h2 class="fs-6 mt-3 fw-bold">Auction end:</h2></label>
     <input type="date" class="form-control" id="auction-end" name:"endsAt" required>
    </div>
    
-  <button type="submit" class="btn btn-success mt-5">Add listing</button>
+  <button type="submit" class="btn btn-primary mt-5">Add listing</button>
 
 </div>
 
 <div class="col-sm-4">
     <div class="mb-3">
-      <h3 class="fs-6" id="image-field-container"><label for="imageUrl" class="form-label fw-bold">Add images</label></h3>
+      <h2 class="fs-6" id="image-field-container"><label for="imageUrl" class="form-label fw-bold">Add images</label></h2>
       <input type="text" class="form-control listing-image mt-2" id="imageUrl" placeholder="Enter image URL" required>
      </div>
-    <button type="button" class="btn btn-light" id="add-image-field-button">Add more</button>
+    <button type="button" class="btn btn-dark" id="add-image-field-button">Add more</button>
     <div class="mb-5 fw-bold text-danger mt-3" id="error-message-field"></div>
 
     <div class="row mt-5"></div>

@@ -37,8 +37,8 @@ async function viewSingleListing(url) {
             `;
 
     singleListingDescriptionAndBid.innerHTML += `
-      <h3 class="mb-3 fw-bold">Description</h3>
-      <p>${listingDescription}</p>
+      <h3 class="mb-3">Description</h3>
+      <p class="force-wordwrap">${listingDescription}</p>
       <div class="row mt-5">
       <div class="mb-4" id="listing-tags"></div>
       <div class="mb-4" id="timer-field"></div>
@@ -46,7 +46,7 @@ async function viewSingleListing(url) {
       <div class="col-6" id="bid-value-field">
       </div>
       <div class="col-6">
-        <button type="button" class="btn btn-success" id="place-bid-button">Place bid</button>
+        <button type="button" class="btn btn-primary" id="place-bid-button"><label for="bid-value">Place bid</label></button>
       </div>
         `;
     
@@ -71,7 +71,6 @@ async function viewSingleListing(url) {
             timerField.innerHTML += `
             Auction ends: ${timer}
           `;
-          //setInterval(countdown, 1000);
           }
         }
         

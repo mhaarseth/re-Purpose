@@ -11855,11 +11855,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: #fff;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -11903,13 +11898,28 @@ a {
   border-color: #8a995d;
 }
 
-/* This does not work, for, as of now, unknown reasons */
 .btn-primary:active {
   background: #8a995d;
   border-color: #8a995d;
 }
 
-/* -- */
+.btn-custom {
+  background: #fff;
+  border-color: #B35D52;
+  border-width: 2px;
+  color: #000;
+}
+
+.btn-custom:hover {
+  background: #B35D52;
+  border-color: #B35D52;
+}
+
+.btn-custom:active {
+  background: #B35D52;
+  border-color: #B35D52;
+}
+
 .brand-heading {
   font-family: Pacifico;
   font-size: 24px;

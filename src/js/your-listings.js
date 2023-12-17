@@ -28,7 +28,7 @@ export async function yourListings() {
                       <div class="card shadow-sm">
                         <img src="${listingsImage}" class="img-fluid listings-custom-img" alt="Product image">
                         <div class="card-body">
-                          <a href="../single-listing/?id=${listingsId}" class="card-text fw-bold">${listingsTitle}</a>
+                          <a href="../single-listing/?id=${listingsId}" class="card-text fw-bold fs-5">${listingsTitle}</a>
                         </div>
                       </div>
             `;

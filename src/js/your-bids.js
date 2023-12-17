@@ -28,7 +28,7 @@ export async function yourBids() {
                       <div class="card shadow-sm">
                         <img src="${bidImage}" class="img-fluid listings-custom-img" alt="Product image">
                         <div class="card-body">
-                          <a href="../single-listing/?id=${bidId}" class="card-text">${bidTitle}</a>
+                          <a href="../single-listing/?id=${bidId}" class="card-text fw-bold fs-5">${bidTitle}</a>
                         </div>
                       </div>
             `;

@@ -24,8 +24,8 @@ async function viewAllListings() {
                   <div class="card shadow-sm">
                     <img src="${listingImage}" class="img-fluid listings-custom-img" alt="Product image">
                     <div class="card-body">
-                      <a href="../single-listing/?id=${listingId}" class="card-text fw-bold">${listingTitle}</a>
-                      <div>${bid} credit</div>
+                      <a href="../single-listing/?id=${listingId}" class="card-text fw-bold fs-5">${listingTitle}</a>
+                      <div class="fw-bold">${bid} credit</div>
                     </div>
                   </div>
         `;
@@ -36,8 +36,8 @@ async function viewAllListings() {
                   <div class="card shadow-sm">
                     <img src="${listingImage}" class="img-fluid listings-custom-img" alt="Product image">
                     <div class="card-body">
-                      <a href="../single-listing/?id=${listingId}" class="card-text fw-bold">${listingTitle}</a>
-                      <div>No bids yet</div>
+                      <a href="../single-listing/?id=${listingId}" class="card-text fw-bold fs-5">${listingTitle}</a>
+                      <div class="fw-bold">No bids yet</div>
                     </div>
                   </div>
         `;

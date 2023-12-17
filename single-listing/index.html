@@ -24,7 +24,7 @@
                       <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                           <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">All listings</a>
+                            <a class="nav-link active" aria-current="page" href="../all-listings/">All listings</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" href="../your-listings/">Your listings</a>
@@ -43,58 +43,40 @@
             </header>
         </div>
       </header>
-
       <main>
-          
-
-
           <div class="container py-5">
             <nav class="navbar">
-                <span class="navbar mb-0 h1 fs-5 fw-normal"><a href="../all-listings/">All listings</a>&nbsp/</span>
+                <span class="navbar mb-0 h1 fs-5 fw-bold"><a href="../all-listings/">All listings</a>&nbsp/&nbsp<h1 class="fs-5 fw-bold mb-0">single listing</h1></span>
               </nav>
-
-<!-- Carousel start-->
-
-<div class="row container justify-content-center mt-5">
-  
-  <div class="col-sm-4">
-    <h3 class="mb-4" id="single-listing-title"></h3>
-    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
-      <div class="carousel-inner" id="listing-images">
-      </div>
-      <container class="container-sm">
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-        </button>
-      </container>
-    </div>
-  </div>
-
-    <!-- Carousel end-->
-    <div class="col-sm-5">
-      <div id="single-listing-description-and-bid">
-      </div>
-      <div class="col-sm-09 mt-3">
-        <div class="mb-5 fw-bold text-danger" id="error-message-field"></div>
-        <h3 class="mb-3">Bid history</h3>
-        <ul class="list-group" id="listing-bid-history"></ul>
-      </div>
-    </div>
-    
-</div>
-
-
-
-
-
+            <div class="row container justify-content-center mt-5">
+              <div class="col-sm-4">
+                <h3 class="mb-4 fw-bold force-wordwrap" id="single-listing-title"></h3>
+                <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
+                  <div class="carousel-inner" id="listing-images">
+                  </div>
+                  <container class="container-sm">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                    </button>
+                  </container>
+                </div>
+              </div>
+            <div class="col-sm-5">
+              <div id="single-listing-description-and-bid">
+              </div>
+              <div class="col-sm-09 mt-3">
+                <div class="mb-5 fw-bold text-danger" id="error-message-field"></div>
+                <h3 class="mb-3 fs-5 fw-bold">Bid history</h3>
+                <ul class="list-group" id="listing-bid-history"></ul>
+              </div>
+            </div>
+        </div>
       </main>
-
-
 
       <footer class="footer mt-auto py-3 container footer-custom">
         <div class="container">

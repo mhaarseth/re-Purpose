@@ -22,7 +22,6 @@ export function placeBid() {
 
       if (response.ok === true) {
         window.location.reload();
-        //return json;
       } else {
         const error = await response.json();
         throw new Error(error.errors[0].message);

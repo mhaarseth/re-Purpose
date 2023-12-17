@@ -6,7 +6,6 @@ form.addEventListener("submit", async (event) => {
   event.preventDefault();
   const formData = new FormData(form);
   const loginCredentials = Object.fromEntries(formData.entries());
-  //const message = document.getElementById("message");
 
   try {
     const response = await loginUser(loginCredentials);

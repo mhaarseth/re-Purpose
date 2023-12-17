@@ -4,4 +4,9 @@
   object-fit: cover;
 }
 
+.force-wordwrap {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
 /*# sourceMappingURL=single-listing.css.map */

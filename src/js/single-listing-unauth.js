@@ -42,7 +42,7 @@ async function viewSingleListing(url) {
       <div class="mb-4" id="listing-tags"></div>
       <div class="mb-4" id="timer-field"></div>
       <div class ="mb-4 fw-bold" id="highest-bid"></div>
-      <p class="fw-bold"><a href="">Register</a> and <a href="">log in</a> to place bids.<p></div>
+      <p class="fw-bold"><a href="../register/" class="fw-bold fs-5">Register</a> or <a href="../login" class="fw-bold fs-5">log in</a> to place bids.<p></div>
         `;
 
         function countdown(targetDate) {
@@ -64,7 +64,6 @@ async function viewSingleListing(url) {
             timerField.innerHTML += `
             Auction ends: ${timer}
           `;
-          //setInterval(countdown, 1000);
           }
         }
         
@@ -116,8 +115,6 @@ async function viewSingleListing(url) {
 
   } catch (error) {
     console.log(error);
-    const errorMessageField = document.getElementById("error-message-field")
-
   }
 }
 

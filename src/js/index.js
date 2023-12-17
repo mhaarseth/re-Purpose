@@ -3,12 +3,12 @@ import { searchListings } from "./components/search.js";
 
 async function viewAllListings() {
   try {
-    const response = await fetch(
-      NOROFF_LISTINGS_ENDPOINT + "?sort=created&sortOrder=desc",
-    );
-    const json = await response.json();
 
-    //console.log(json)
+    const bidsUrl = new URL(NOROFF_LISTINGS_ENDPOINT + "?sort=created&sortOrder=desc");
+    bidsUrl.searchParams.append("_bids", "true");
+
+    const response = await fetch(bidsUrl);
+    const json = await response.json();
 
     for (let i = 0; i < json.length; i++) {
       const listingsFeed = document.getElementById("listings-feed");
@@ -16,15 +16,32 @@ async function viewAllListings() {
       const listingImage = json[i].media[0];
       const listingId = json[i].id;
 
-      listingsFeed.innerHTML += `
+      if (json[i].bids[0] != undefined) {
+          const bid = json[i].bids[0].amount;
+
+          listingsFeed.innerHTML += `
         <div class="col">
                   <div class="card shadow-sm">
                     <img src="${listingImage}" class="img-fluid listings-custom-img" alt="Product image">
                     <div class="card-body">
-                      <a href="../single-listing-unauth/?id=${listingId}" class="card-text">${listingTitle}</a>
+                      <a href="../single-listing/?id=${listingId}" class="card-text fw-bold">${listingTitle}</a>
+                      <div>${bid} credit</div>
                     </div>
                   </div>
         `;
+
+      } else {
+        listingsFeed.innerHTML += `
+        <div class="col">
+                  <div class="card shadow-sm">
+                    <img src="${listingImage}" class="img-fluid listings-custom-img" alt="Product image">
+                    <div class="card-body">
+                      <a href="../single-listing/?id=${listingId}" class="card-text fw-bold">${listingTitle}</a>
+                      <div>No bids yet</div>
+                    </div>
+                  </div>
+        `;
+      }
     }
 
     const searchForm = document.getElementById("search-form");

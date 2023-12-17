@@ -11881,6 +11881,12 @@ a {
   padding-right: 0;
 }
 
+.footer-custom {
+  background: #8a995d;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
 .navbar-brand {
   padding-top: 0;
 }

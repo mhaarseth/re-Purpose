@@ -8,8 +8,6 @@ $primary: #8a995d;
   background-color: #fff;
 }
 
-
-
 body {
   display: flex;
   flex-direction: column;
@@ -29,6 +27,12 @@ a {
 .header-custom {
   padding-left: 0;
   padding-right: 0;
+}
+
+.footer-custom {
+  background: #8a995d;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
 }
 
 .navbar-brand {

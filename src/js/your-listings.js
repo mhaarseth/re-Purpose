@@ -16,12 +16,14 @@ export async function yourListings() {
 
     const response = await fetch(url, options);
     const json = await response.json();
+    const reversedListings = json.listings.reverse();
+ 
 
     for (let i = 0; i < json.listings.length; i++) {
       const yourListingsFeed = document.getElementById("your-listings-feed");
-      const listingsTitle = json.listings[i].title;
-      const listingsImage = json.listings[i].media[0];
-      const listingsId = json.listings[i].id;
+      const listingsTitle = reversedListings[i].title;
+      const listingsImage = reversedListings[i].media[0];
+      const listingsId = reversedListings[i].id;
 
       yourListingsFeed.innerHTML += `
             <div class="col">

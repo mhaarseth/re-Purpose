@@ -7,22 +7,22 @@ const singleProfile = NOROFF_PROFILES_ENDPOINT + "/" + profileName;
 const profileContent = document.getElementById("profile-content");
 
 async function getProfile() {
-        try {
-        const token = localStorage.getItem("token");
-        const options = {
-            headers: {
-            Authorization: `Bearer ${token}`,
-            },
-        };
-    
-        const response = await fetch(singleProfile, options);
-        const json = await response.json();
-        console.log(json);
-        const profileCredits = json.credits;
-        const profileAvatar = json.avatar;
+  try {
+    const token = localStorage.getItem("token");
+    const options = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
 
-        if (profileAvatar === null) {
-            profileContent.innerHTML = `
+    const response = await fetch(singleProfile, options);
+    const json = await response.json();
+    console.log(json);
+    const profileCredits = json.credits;
+    const profileAvatar = json.avatar;
+
+    if (profileAvatar === null) {
+      profileContent.innerHTML = `
                                     <div class="text-center">
                                     <img src="https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_1280.png" width="200px" class="img-thumbnail" alt="Profile avatar">
                                     <p><button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal" id="edit-avatar-button">
@@ -57,7 +57,8 @@ async function getProfile() {
                                     <div class="mb-5">${profileCredits} credits</div>
                                     </div>
             `;
-            } else {profileContent.innerHTML = `
+    } else {
+      profileContent.innerHTML = `
             <div class="text-center">
             <img src="${profileAvatar}" width="200px" class="img-thumbnail" alt="Profile avatar">
             <p><button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#exampleModal" id="edit-avatar-button">
@@ -92,17 +93,16 @@ async function getProfile() {
             <div class="mb-5">${profileCredits} credits</div>
             </div>
 `;
-        }
-        const editAvatarButton = document.getElementById("edit-avatar-button");
-
-editAvatarButton.addEventListener("click", async function (event) {
-    console.log("Avatarbutton clicked");
-    editAvatar();
-  });
-    } catch (error) {
-      console.log(error);
     }
+    const editAvatarButton = document.getElementById("edit-avatar-button");
+
+    editAvatarButton.addEventListener("click", async function (event) {
+      console.log("Avatarbutton clicked");
+      editAvatar();
+    });
+  } catch (error) {
+    console.log(error);
   }
+}
 getProfile();
 logOut();
-

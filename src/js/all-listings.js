@@ -4,11 +4,10 @@ import { searchListings } from "./components/search.js";
 async function viewAllListings() {
   try {
     const response = await fetch(
-      NOROFF_LISTINGS_ENDPOINT + "?sort=created&sortOrder=desc",
+      NOROFF_LISTINGS_ENDPOINT + "?sort=created&sortOrder=desc"
     );
     const json = await response.json();
 
-    //console.log(json)
 
     for (let i = 0; i < json.length; i++) {
       const listingsFeed = document.getElementById("listings-feed");
@@ -21,7 +20,7 @@ async function viewAllListings() {
                   <div class="card shadow-sm">
                     <img src="${listingImage}" class="img-fluid listings-custom-img" alt="Product image">
                     <div class="card-body">
-                      <a href="../single-listing-unauth/?id=${listingId}" class="card-text">${listingTitle}</a>
+                      <a href="../single-listing/?id=${listingId}" class="card-text fw-bold">${listingTitle}</a>
                     </div>
                   </div>
         `;
@@ -49,7 +48,7 @@ async function viewAllListings() {
                     <div class="card shadow-sm">
                       <img src="${resultImage}" class="img-fluid listings-custom-img" alt="Product image">
                       <div class="card-body">
-                        <a href="../single-listing-unauth/?id=${resultId}" class="card-text">${resultTitle}</a>
+                        <a href="../single-listing/?id=${resultId}" class="card-text">${resultTitle}</a>
                       </div>
                     </div>
           `;

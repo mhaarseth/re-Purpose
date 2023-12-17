@@ -1,31 +1,20 @@
 export function searchListings() {
-    const searchForm =  document.getElementById("search-form")
+  const searchForm = document.getElementById("search-form");
 
-    searchForm.addEventListener("keyup", async function search(event) {
-        try {
-            const listings = await viewAllListings();
-            console.log(listings);
-          } catch (error) {
-            console.error('Error:', error);
-          }
+  searchForm.addEventListener("keyup", async function search(event) {
+    try {
+      const listings = await viewAllListings();
+      console.log(listings);
+    } catch (error) {
+      console.error("Error:", error);
+    }
 
-        
-        event.preventDefault();
-        const searchInput = document.getElementById("search-value");
-        const searchTerm = searchInput.value.toLowerCase();
-        console.log(searchTerm);
-
-        
-
-
-
-        
-
-    })
+    event.preventDefault();
+    const searchInput = document.getElementById("search-value");
+    const searchTerm = searchInput.value.toLowerCase();
+    console.log(searchTerm);
+  });
 }
-
-
-
 
 /*
 try {

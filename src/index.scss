@@ -1,5 +1,9 @@
-$primary: #8A995D;
-
 @import "variables";
-@import "/node_modules/bootstrap/scss/bootstrap.scss"
+@import "/node_modules/bootstrap/scss/bootstrap.scss";
 
+$primary: #8a995d;
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #fff;
+}

@@ -10,18 +10,16 @@ form.addEventListener("submit", async (event) => {
 
   try {
     const response = await loginUser(loginCredentials);
-    window.location.href = "/profile/";
+    window.location.href = "/all-listings/";
   } catch (error) {
-    /*message.innerHTML = error.message;
-    message.setAttribute(
-      "class",
-      "text-danger d-flex justify-content-center mt-5"
-    );*/
+    const errorMessageField = document.getElementById("error-message-field");
+      errorMessageField.innerHTML = `
+      ${error}
+      `
   }
 });
 
 async function loginUser(loginCredentials) {
-
   const postOptions = {
     method: "POST",
     headers: {

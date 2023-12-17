@@ -1,7 +1,6 @@
 import { NOROFF_REGISTER_ENDPOINT } from "./constants/endpoints.js";
 
 const form = document.getElementById("registerForm");
-//console.log(NOROFF_REGISTER_ENDPOINT);
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -9,23 +8,14 @@ form.addEventListener("submit", async (event) => {
   const form = event.target;
   const formData = new FormData(form);
   const userData = Object.fromEntries(formData.entries());
-  //const message = document.getElementById("message");
 
   try {
     const response = await registerNewUser(userData);
-
-    /*message.innerHTML = `<a href="../index.html" class="d-flex justify-content-center mt-5">Registration success, click to log in.</a>`;
-    message.setAttribute(
-      "class",
-      "text-success d-flex justify-content-center mt-5"
-    );*/
   } catch (error) {
-    /*message.innerHTML = error.message;
-    message.setAttribute(
-      "class",
-      "text-danger d-flex justify-content-center mt-5"
-    );*/
-    console.log(error);
+    const errorMessageField = document.getElementById("error-message-field");
+      errorMessageField.innerHTML = `
+      ${error}
+      `
   }
 });
 

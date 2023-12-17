@@ -18,7 +18,7 @@
             <header class="container header-custom">
                 <nav class="navbar navbar-expand-lg header-custom">
                     <div class="container-fluid header-custom">
-                      <a class="navbar-brand brand-heading" href="#">re:Purpose</a>
+                      <a class="navbar-brand brand-heading" href="../all-listings/">re:Purpose</a>
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
@@ -60,17 +60,17 @@
 <div class="col-sm-4">
   <form id="add-listing-form">
   <div class="mb-3">
-    <h3 class="fs-6"><label for="listingTitle" class="form-label">Title</label></h3>
+    <h3 class="fs-6"><label for="listingTitle" class="form-label fw-bold">Title</label></h3>
     <input type="text" class="form-control" id="listingTitle" name="title" placeholder="" required>
   </div>
   <div class="mb-3">
-    <label for="listingDescription" class="form-label">Description</label>
-    <textarea class="form-control" id="listingDescription" name="description" rows="3"></textarea>
+    <label for="listingDescription" class="form-label fw-bold">Description</label>
+    <textarea class="form-control" id="listingDescription" name="description" rows="3" required></textarea>
   </div>
-  <h3 class="fs-6 mt-3">Tag:</h3>
+  <h3 class="fs-6 mt-3 fw-bold">Tag:</h3>
 
   <div class="form-check">
-    <input class="form-check-input listing-tag" type="radio" name="tags" id="fixed-tag" value="fixed">
+    <input class="form-check-input listing-tag" type="radio" name="tags" id="fixed-tag" value="fixed" required>
     <label class="form-check-label" for="fixed-tag">
       Fixed
     </label>
@@ -83,8 +83,8 @@
   </div>
   
   <div class="mb-3">
-    <label for="auction-end" class="form-label"><h3 class="fs-6 mt-3">Auction end:</h3></label>
-    <input type="date" class="form-control" id="auction-end" name:"endsAt">
+    <label for="auction-end" class="form-label"><h3 class="fs-6 mt-3 fw-bold">Auction end:</h3></label>
+    <input type="date" class="form-control" id="auction-end" name:"endsAt" required>
    </div>
    
   <button type="submit" class="btn btn-success mt-5">Add listing</button>
@@ -93,12 +93,11 @@
 
 <div class="col-sm-4">
     <div class="mb-3">
-      <h3 class="fs-6"><label for="imageUrl" class="form-label">Add images</label></h3>
-      <input type="text" class="form-control listing-image" id="imageUrl" placeholder="Enter image URL">
-      <input type="text" class="form-control listing-image" id="imageUrl" placeholder="Enter image URL">
-      <input type="text" class="form-control listing-image" id="imageUrl" placeholder="Enter image URL">
+      <h3 class="fs-6" id="image-field-container"><label for="imageUrl" class="form-label fw-bold">Add images</label></h3>
+      <input type="text" class="form-control listing-image mt-2" id="imageUrl" placeholder="Enter image URL" required>
      </div>
-    <button type="button" class="btn btn-light">Add more</button>
+    <button type="button" class="btn btn-light" id="add-image-field-button">Add more</button>
+    <div class="mb-5 fw-bold text-danger mt-3" id="error-message-field"></div>
 
     <div class="row mt-5"></div>
 </div>
